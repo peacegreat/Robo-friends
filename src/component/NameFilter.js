@@ -261,12 +261,12 @@ const NameFilter = () => {
         value={searchTerm}
         onChange={handleSearchChange}
       />
-      <div className="border border-gray-300 rounded-md px-4 py-5 gap-5 grid grid-cols-5 font-italize font-serif text-left focus:outline-none ">
+      <div className="border border-gray-300 rounded-md px-4 py-5 gap-5 grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 font-italize font-serif text-left focus:outline-none w-full max-w-screen-xl ">
         {searchResults.length === 0 ? (
           <p>No results found.</p>
         ) : (
           searchResults.map(result => (
-            <div key={result.id} className="bg-white border border-gray-300 p-4 mb-4 rounded-md"> <img src={result.imageUrl} alt={result.name} className="rounded-full mb-4"/>
+            <div key={result.id} className="bg-white border border-gray-300 p-4 mb-4 rounded-md"> <img src={result.imageUrl} alt={result.name} className="rounded-full mb-4 mx-auto sm:mx-0"/>
             <p><strong>Name:</strong>{result.name}</p>
             <p><strong>Username:</strong>{result.username}</p>
             <p><strong>Email:</strong>{result.email}</p>
